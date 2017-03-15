@@ -3,7 +3,7 @@
  *                         All rights reserved.
  * Copyright (c) 2016      Research Organization for Information Science
  *                         and Technology (RIST). All rights reserved.
- * Copyright (c) 2016      ARM, Inc. All rights reserved.
+ * Copyright (c) 2016-2017 ARM, Inc. All rights reserved.
  * $COPYRIGHT$
  * 
  * Additional copyrights may follow
@@ -34,7 +34,6 @@
 #include "orte/runtime/orte_globals.h"
 
 #include <ucp/api/ucp.h>
-
 BEGIN_C_DECLS
 
 /**
@@ -117,6 +116,7 @@ extern int mca_spml_ucx_add_procs(ompi_proc_t** procs, size_t nprocs);
 extern int mca_spml_ucx_del_procs(ompi_proc_t** procs, size_t nprocs);
 extern int mca_spml_ucx_fence(void);
 extern int mca_spml_ucx_quiet(void);
+extern int mca_spml_ucx_wait(void* addr, int cmp, void* value, int datatype);
 extern int spml_ucx_progress(void);
 
 
